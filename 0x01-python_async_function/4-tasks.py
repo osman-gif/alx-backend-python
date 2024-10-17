@@ -15,6 +15,7 @@ task_wait_random = __import__('3-tasks').task_wait_random
 
 async def task_wait_n(n: int, max_delay: int) -> list:
     result: list = []
+    i: int = 0
     for i in range(n):
         i = await task_wait_random(max_delay)
 
